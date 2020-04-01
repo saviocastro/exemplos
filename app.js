@@ -1,10 +1,16 @@
-function mostrarHelp() {
+function mostrarHelp(Elemento) {
 
-  //console.log(elmnt);
-  if (document.getElementById("help").style.display == 'none')
+	var elementID = document.getElementById(Elemento);  
+	var botao = document.getElementById("botao");
+
+  console.log(Elemento);
+  if (elementID.style.display == 'none')
     {
-		document.getElementById("help").style.display = '';	
+		elementID.style.display = 'block';	
+		botao.textContent = 'Ocultar';
+
 	} else {
-		document.getElementById("help").style.display = 'none';	
+		elementID.style.display = 'none';	
+		botao.textContent = 'Mostrar';
 	}
 }
